@@ -68,8 +68,8 @@ For example
 POST /vehicles
 
 {
-	"modelYear": 2015,
-	"manufacturer": "Audi",
+    "modelYear": 2015,
+    "manufacturer": "Audi",
     "model": "A3"
 }
 ```
