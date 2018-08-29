@@ -4,8 +4,7 @@ This repository holds API for accessing vehicle data from NHTSA Child Safety Sea
 
 This API uses an upstream data provider located at 
 [NHTSA NCAP 5 Star
-Safety Ratings API](https://one.nhtsa.gov/webapi/Default.aspx?
-SafetyRatings/API/5)
+Safety Ratings API](https://one.nhtsa.gov/webapi/Default.aspx?SafetyRatings/API/5)
 
 ## Installation
 
