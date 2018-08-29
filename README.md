@@ -8,13 +8,17 @@ Safety Ratings API](https://one.nhtsa.gov/webapi/Default.aspx?SafetyRatings/API/
 
 ## Installation
 
-To install all the dependencies simply run. 
+This project uses [Lumen framework](https://lumen.laravel.com/) as an underlying framework among other dependencies. To install all the dependencies simply run. 
 
 ```
 composer install
 ```
 
 ## Run
+
+Copy the .env.example to .env file and make app specific changes to it. 
+
+`cp .env.example .env`
 
 You can either use any PHP supporting servers like Apache or NGINX or use a standalone PHP server like this. 
 
