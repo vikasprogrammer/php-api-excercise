@@ -20,7 +20,7 @@ php -S localhost:8080 -t ./public
 
 ## API Details
 
-To get vehicle data using a GET request 
+###### Get vehicle data using a GET request 
 
 **Request**
 
@@ -56,4 +56,61 @@ For example
 }
 ```
 
+###### Get vehicle data using a POST request with JSON params 
+
+**Request**
+
+```
+POST /vehicles
+
+{
+	"modelYear": 2015,
+	"manufacturer": "Audi",
+    "model": "A3"
+}
+```
+
+**Response**
+
+Same as previous api request.
+
+###### Get vehicle data using a GET request with Crash Ratings
+
+**Request**
+
+`/vehicles/{year}/{make}/{model}?withRating=true`
+
+For example 
+
+`/vehicles/2015/Audi/A3?withRating=true` 
+
+**Response**
+
+```
+{
+  "Count": 4,
+  "Results": [
+    {
+      "Description": "2015 Audi A3 4 DR AWD",
+      "VehicleId": 9403,
+      "CrashRating": "5"
+    },
+    {
+      "Description": "2015 Audi A3 4 DR FWD",
+      "VehicleId": 9408,
+      "CrashRating": "5"
+    },
+    {
+      "Description": "2015 Audi A3 C AWD",
+      "VehicleId": 9405,
+      "CrashRating": "Not Rated"
+    },
+    {
+      "Description": "2015 Audi A3 C FWD",
+      "VehicleId": 9406,
+      "CrashRating": "Not Rated"
+    }
+  ]
+}
+```
 
