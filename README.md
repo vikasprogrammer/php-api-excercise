@@ -2,6 +2,11 @@
 
 This repository holds API for accessing vehicle data from NHTSA Child Safety Seat Inspection Station Locator. 
 
+This API uses an upstream data provider located at 
+[NHTSA NCAP 5 Star
+Safety Ratings API](https://one.nhtsa.gov/webapi/Default.aspx?
+SafetyRatings/API/5)
+
 ## Installation
 
 To install all the dependencies simply run. 
@@ -20,7 +25,7 @@ php -S localhost:8080 -t ./public
 
 ## API Details
 
-###### Get vehicle data using a GET request 
+#### Get vehicle data using a GET request 
 
 **Request**
 
@@ -56,7 +61,7 @@ For example
 }
 ```
 
-###### Get vehicle data using a POST request with JSON params 
+#### Get vehicle data using a POST request with JSON params 
 
 **Request**
 
@@ -74,7 +79,7 @@ POST /vehicles
 
 Same as previous api request.
 
-###### Get vehicle data using a GET request with Crash Ratings
+#### Get vehicle data using a GET request with Crash Ratings
 
 **Request**
 
@@ -114,3 +119,15 @@ For example
 }
 ```
 
+#### Empty or Error response
+
+If the vehicle search parameters are not found or are invalid, the api will respond an empty array like this:
+
+```
+{
+  "Count": 0,
+  "Results": [
+    
+  ]
+}
+```
